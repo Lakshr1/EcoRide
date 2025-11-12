@@ -20,11 +20,12 @@ The platform combines **TypeScript microservices**, **PL/SQL logic**, and **Supa
 ```mermaid
 graph TD
 
-A[React Native Mobile App] --> B[TypeScript API Gateway]
-B --> C[Supabase (PostgreSQL)]
-C --> D[PL/SQL Logic Layer]
-B --> E[Analytics and Notification Services]
-E --> F[3rd-Party APIs: Maps, Payments, Messaging]
+  RN[React Native<br/>Mobile App] --> API[TypeScript API<br/>Gateway]
+  API --> DB[Supabase<br/>PostgreSQL]
+  DB --> PL[PL/SQL Logic<br/>Layer]
+  API --> AN[Analytics &<br/>Notification Services]
+  AN --> TP[3rd-Party APIs: Maps,<br/>Payments, Messaging]
+
 
 ```
 
