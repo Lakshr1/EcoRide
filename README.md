@@ -1,11 +1,3 @@
-Below is your content rewritten with **correct naming, working links, and consistent branding** for **RideABit** and its apps on both stores.
-
----
-
-Here is the updated version with **emojis added** to the Website, iOS App, and Android App links:
-
----
-
 # 🌍 **RideABit: Sustainable Ride-Pooling Platform**
 
 **🌐 Website:** [https://www.rideabit.com/](https://www.rideabit.com/)
