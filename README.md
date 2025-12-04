@@ -1,109 +1,154 @@
-# 🌍 EcoRide: Sustainable Ride-Pooling Platform
-
-> **Note:** This repository currently hosts documentation only.
-> The full source code remains **private** due to active development and client confidentiality.
-> Access to architecture or demo endpoints can be provided upon request for technical evaluation.
+Below is your content rewritten with **correct naming, working links, and consistent branding** for **RideABit** and its apps on both stores.
 
 ---
 
-## 🚀 Project Overview
-
-**EcoRide** is a sustainability-driven **ride-pooling platform** that promotes shared mobility to reduce traffic congestion and carbon emissions.
-Built with enterprise-grade design principles including **ACID-compliant transactions**, modular microservices, and automated testing, it demonstrates production-level backend engineering aligned with real-world fintech and mobility systems.
-
-The platform combines **TypeScript microservices**, **PL/SQL logic**, and **Supabase** as a secure, cloud-native data backbone.
+Here is the updated version with **emojis added** to the Website, iOS App, and Android App links:
 
 ---
 
-## 🏗️ System Architecture
+# 🌍 **RideABit: Sustainable Ride-Pooling Platform**
+
+**🌐 Website:** [https://www.rideabit.com/](https://www.rideabit.com/)
+**🍎 iOS App:** [https://apps.apple.com/in/app/rideabit/id6751160520](https://apps.apple.com/in/app/rideabit/id6751160520)
+**🤖 Android App:** [https://play.google.com/store/apps/details?id=com.rideabit.rideabit](https://play.google.com/store/apps/details?id=com.rideabit.rideabit)
+
+> **Note:** This repository currently includes **documentation only**.
+> The full source code remains **private** due to active development and confidentiality.
+> Architecture details or demo endpoints can be shared **upon request** for technical review.
+
+
+
+---
+
+## 🚀 **Project Overview**
+
+**RideABit** is an environmentally conscious **ride-pooling and shared-mobility platform** designed to reduce urban traffic and carbon emissions.
+With enterprise-grade engineering—covering **ACID-compliant transactions**, modular microservices, and automated testing pipelines—the platform reflects production-ready backend design often used in mobility and fintech applications.
+
+The platform uses **TypeScript microservices**, **PL/SQL business logic**, and **Supabase** as the secure, cloud-native database layer.
+
+---
+
+## 🏗️ **System Architecture**
 
 ```mermaid
 graph TD
 
-  RN[React Native<br/>Mobile App] --> API[TypeScript API<br/>Gateway]
+  RN[RideABit<br/>React Native Apps] --> API[TypeScript API<br/>Gateway]
   API --> DB[Supabase<br/>PostgreSQL]
-  DB --> PL[PL/SQL Logic<br/>Layer]
+  DB --> PL[PL/SQL Logic<br/>Business Layer]
   API --> AN[Analytics &<br/>Notification Services]
   AN --> TP[3rd-Party APIs: Maps,<br/>Payments, Messaging]
 
-
 ```
 
-### 🔹 Key Components
+### 🔹 **Key Components**
 
-| Layer              | Technology                     | Description                                                                                                                |
-| ------------------ | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
-| **Frontend**       | React Native                   | Cross-platform mobile interface for trip creation and discovery.                                                           |
-| **Backend API**    | TypeScript (Express or NestJS) | RESTful API handling authentication, route orchestration, and transaction workflows.                                       |
-| **Database**       | Supabase (PostgreSQL)          | Cloud-managed ACID-compliant database with integrated authentication and real-time updates.                                |
-| **Business Logic** | PL/SQL Packages                | Stored procedures implement critical business rules such as trip lifecycle, fare computation, and transactional integrity. |
-| **Automation**     | Unix / Shell Scripts           | Automated environment setup, testing, and monitoring.                                                                      |
-| **Testing**        | Jest and utPLSQL               | Unit and integration testing for both API and database layers executed via CI pipelines.                                   |
-
----
-
-## 🧩 Engineering Highlights
-
-* **ACID Transactional Integrity**
-  Every booking, payment, and trip update is executed within atomic, consistent, isolated, and durable transactions to ensure data reliability and rollback safety.
-
-* **Secure Modular Design**
-  Clear separation between business logic written in PL/SQL and the API layer, enforcing least privilege and minimizing attack surface.
-
-* **CI/CD Integration**
-  Automated pipelines using GitHub Actions validate code quality, run Jest and utPLSQL tests, and deploy containerized builds.
-
-* **Cloud-Native Data Stack**
-  Supabase ensures a high-availability PostgreSQL backend with real-time synchronization and role-based access control.
-
-* **Unix-Based Automation**
-  Shell scripts handle environment provisioning, migrations, and system health checks for consistent deployment across Linux environments.
+| Layer              | Technology                  | Description                                                                                                      |
+| ------------------ | --------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **Mobile App**     | React Native                | Cross-platform RideABit app for ride creation, pooling, matching, and trip management.                           |
+| **Backend API**    | TypeScript (Express/NestJS) | Handles authentication, route orchestration, ride lifecycle, payment workflows, and trip logic.                  |
+| **Database**       | Supabase (PostgreSQL)       | Managed ACID-compliant DB with real-time sync and granular role-based access control.                            |
+| **Business Logic** | PL/SQL Packages             | Critical logic for pricing, trip lifecycle, matching, and transactional integrity runs inside stored procedures. |
+| **Automation**     | Shell Scripts               | Environment setup, migrations, backups, and monitoring.                                                          |
+| **Testing**        | Jest + utPLSQL              | Comprehensive automated tests at the API and database layers.                                                    |
 
 ---
 
-## 🧪 Testing and Quality Assurance
+## 🧩 **Engineering Highlights**
 
-| Test Layer             | Framework              | Purpose                                                     |
-| ---------------------- | ---------------------- | ----------------------------------------------------------- |
-| API Unit Tests         | **Jest**               | Validate core endpoints and logic in isolation.             |
-| Integration Tests      | **Mocha or Supertest** | Test multi-service workflows and data consistency.          |
-| Database Tests         | **utPLSQL**            | Verify stored procedure correctness and transaction safety. |
-| Continuous Integration | **GitHub Actions**     | Auto-executes tests, linting, and static analysis.          |
+### ✅ **ACID Transactional Integrity**
 
-Example:
+Every booking, ride-pool match, and payment is executed within atomic and durable transactions for consistency and safety.
+
+### 🔐 **Secure Modular Architecture**
+
+A strict separation between PL/SQL business rules and the TypeScript API ensures minimal attack surface and enforces principle of least privilege.
+
+### 🔄 **CI/CD with GitHub Actions**
+
+Automated pipelines run:
+
+* Linting
+* Jest API tests
+* utPLSQL database tests
+* Docker builds & deployments
+
+### ☁️ **Cloud-Native Data Layer**
+
+Supabase provides:
+
+* High-availability PostgreSQL
+* Integrated auth
+* Row-Level Security (RLS)
+* Real-time triggers and channels
+
+### 🛠️ **Unix-Based Automation**
+
+Shell scripts handle:
+
+* Deployments
+* DB migrations
+* Monitoring
+* Environment provisioning
+
+---
+
+## 🧪 **Testing & Quality Assurance**
+
+| Test Layer            | Framework         | Purpose                                                     |
+| --------------------- | ----------------- | ----------------------------------------------------------- |
+| **API Unit Tests**    | Jest              | Validate core backend logic and endpoints.                  |
+| **Integration Tests** | Mocha / Supertest | Test multi-service workflows, trip lifecycle, and matching. |
+| **Database Tests**    | utPLSQL           | Ensure reliable stored procedure logic and ACID safety.     |
+| **CI/CD**             | GitHub Actions    | Automated tests, build validation, and deployments.         |
+
+Example Commands:
 
 ```bash
-./scripts/run_tests.sh   # Executes Jest and utPLSQL suites
-./scripts/deploy.sh      # Builds Docker image and pushes via CI/CD
+./scripts/run_tests.sh   # Run Jest + utPLSQL
+./scripts/deploy.sh      # Build and deploy Docker containers
 ```
 
 ---
 
-## 🌱 Impact
+## 🌱 **Sustainability Impact**
 
-* Promotes environmentally responsible commuting by encouraging shared mobility.
-* Demonstrates how robust backend engineering with ACID compliance, automated testing, and modular PL/SQL logic supports scalable, real-time transportation systems.
-* Serves as a case study in sustainable system design for urban applications.
+RideABit directly contributes to eco-friendly transportation by:
 
----
-
-## 🔐 Repository Status
-
-> The full source code is **private**.
-> Documentation, system design, and deployment architecture are publicly available here.
-> A limited demo instance or architecture walkthrough can be shared upon request.
+* Encouraging shared mobility
+* Reducing vehicles on the road
+* Lowering fuel use and carbon emissions
+* Supporting smart-city mobility infrastructure
 
 ---
 
-## 👨‍💻 Author
+## 🔐 **Repository Status**
+
+The complete source code is **private** due to active development.
+This public documentation includes:
+
+* System design
+* Architecture details
+* Engineering workflow
+
+A secure demo or architecture walkthrough is available on request.
+
+---
+
+## 👨‍💻 **Author**
 
 **Lakshraj Singh Rao**
 *Delivery Data Analyst, Turing*
-Expertise in LLMs, ML pipelines, PL/SQL, and scalable backend systems.
-[LinkedIn](https://linkedin.com/in/lakshr1) · [GitHub](https://github.com/Lakshr1)
+Specialized in LLMs, ML pipelines, PL/SQL engineering, and scalable backend systems.
+
+**Profiles:**
+
+* **LinkedIn:** [https://linkedin.com/in/lakshr1](https://linkedin.com/in/lakshr1)
+* **GitHub:** [https://github.com/Lakshr1](https://github.com/Lakshr1)
 
 ---
 
-## 🏁 Keywords
+## 🏁 **Keywords**
 
-`PL/SQL` · `Supabase` · `TypeScript` · `React Native` · `ACID Transactions` · `Unix Automation` · `Unit Testing` · `Agile Development` · `Sustainability`
+`RideABit` · `Ride Pooling` · `PL/SQL` · `Supabase` · `React Native` · `TypeScript` · `Microservices` · `ACID Transactions` · `Unix Automation` · `CI/CD` · `Sustainable Mobility`
